@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+     --Moderate-violet: hsl(263, 55%, 52%);
+     --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+     --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+     --White: hsl(0, 0%, 100%);
+     --Light-gray: hsl(0, 0%, 81%);
+     --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::before {
+     margin: 0;
+     padding: 0;
+}
+
+body,
+html {
+     font-size: 13px;
+     font-family: "Barlow Semi Condensed", sans-serif;
+     background-color: var(--Light-grayish-blue);
+     min-height: 100vh;
+     min-width: 100%;
+}
+
+main {
+     display: grid;
+     padding: 30px;
+     gap: 30px;
+     margin-top: 40px;
+}
+
+img {
+     width: 42px;
+     height: 42px;
+     float: left;
+     border-radius: 40px;
+     margin-top: 12px;
+}
+
+[class^="card"] {
+     display: grid;
+     border-radius: 16px;
+     padding: 30px;
+     align-items: center;
+     justify-content: center;
+}
+
+.profile-title {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 5px;
+     padding: 18px;
+}
+
+.card-1 {
+     background-color: var(--Moderate-violet);
+     background-image: url(./images/bg-pattern-quotation.svg);
+     background-repeat: no-repeat;
+     background-position-x: 85%;
+     background-size: 40%;
+     color: white;
+}
+
+.card-2 {
+     background-color: var(--Very-dark-grayish-blue);
+     color: white;
+}
+
+.card-3,
+.card-5 {
+     background-color: white;
+     color: var(--Very-dark-grayish-blue);
+}
+
+.card-4 {
+     background-color: var(--Very-dark-blackish-blue);
+     color: white;
+}
+.name {
+     font-weight: 600;
+}
+
+.title {
+     opacity: 50%;
+}
+
+.summary {
+     font-weight: 500;
+     font-size: 1.8em;
+}
+
+.detailed {
+     font-size: 125%;
+     line-height: 150%;
+     opacity: 70%;
+}
+
+footer {
+     text-align: center;
+}
+
+@media (min-width: 1200px) {
+     main {
+          display: grid;
+          grid-template-columns: repeat(4, 300px);
+          grid-template-rows: repeat(2, 375px);
+          justify-content: center;
+          align-content: center;
+     }
+
+     .card-1 {
+          background-size: 20%;
+          grid-column: 1 / span 2;
+     }
+
+     .card-3 {
+          grid-row: 2;
+     }
+
+     .card-4 {
+          grid-row: 2;
+          grid-column: 2 / span 2;
+     }
+
+     .card-5 {
+          grid-column: 4;
+          grid-row: 1 / span 2;
+     }
+}
